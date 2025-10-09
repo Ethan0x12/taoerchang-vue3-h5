@@ -50,6 +50,9 @@ export const useLoginStore = defineStore('login', () => {
       throw new Error('用户信息未初始化')
     }
     const openId = wechatUserInfo.value?.open_id
+    const username = wechatUserInfo.value?.name
+    const avatar = wechatUserInfo.value?.avatar
+    const nick_name = wechatUserInfo.value?.nick_name
     if (!openId) {
       throw new Error('openid 为空')
     }
@@ -59,6 +62,9 @@ export const useLoginStore = defineStore('login', () => {
         login_field: 'openid',
         login_value: openId,
         openid: openId,
+        username: username || '',
+        avatar: avatar || '',
+        nick_name: nick_name || '',
       },
     )) as {
       token: string
