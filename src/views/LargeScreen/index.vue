@@ -10,7 +10,7 @@ defineOptions({
   name: 'LargeScreen',
 })
 // 弹幕轨道
-const channels = 8
+const channels = 10
 // 弹幕速度
 const speeds = 60
 // 弹幕列表
